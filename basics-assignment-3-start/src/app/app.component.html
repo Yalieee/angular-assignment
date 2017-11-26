@@ -11,3 +11,13 @@
     </div>
   </div>
 </div>
+
+<button 
+  class="btn btn-primary" 
+  (click)="onClick()">Display details</button>
+
+<p [hidden]="hideText">Unlimited Blade Works</p>
+<p 
+  *ngFor="let timestamp of clickLogs"
+  [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{whiteText: clickLogs.length >= 5}">>{{ timestamp }}</p>
